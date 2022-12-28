@@ -7,26 +7,18 @@ print('Rezolvare #1')
 # ● Fă același lucru cu un while.
 
 masini = ['Audi', 'Volvo', 'BMW', 'Mercedes', 'Aston Martin', 'Lăstun', 'Fiat', 'Trabant', 'Opel']
-for masina_preferata in range (len(masini)):
-    print(f'Masina mea preferata este: {masina_preferata} ' )
-print('---------------------------------------------------')
+m = 0
+for m in range(len(masini)):
+    print(f'Masina mea preferata este: {masini[m]}')
 
-# while masina_preferata in range(len(masini)):
-#     print((f'Masina mea preferata este {masina_preferata}'))
-#     break
-print('---------------------------------------------------')
+for masina in masini:
+    print(f'Masina mea preferata este {masina}')
 
-# masina_preferata = 0
-# while masina_preferata < (len(masini)):
-#     print(f'Masina mea preferata este {masina_preferata[masina_preferata]}')
-
-
-# for masina in masini:
-#     print('Masina mea preferata este: ' + masini[3])
-#
-# while masina in masini:
-#     print('Masina mea preferata este: ' + masini[3])
-#     break
+masina = len(masini)
+m = 0
+while m < masina:
+    print(f'Masina mea preferata este {masini[m]}')
+    m += 1
 
 print('Rezolvare #2')
 # 2. Aceeași listă:
@@ -59,7 +51,13 @@ print('Rezolvare #3')
 # Altfel:
 # Printează ‘Am găsit mașina X. Mai căutam‘
 
-
+masini = ['Audi', 'Volvo', 'BMW', 'Mercedes', 'Aston Martin', 'Lăstun', 'Fiat', 'Trabant', 'Opel']
+for masina in masini:
+    if masina == 'Mercedes':
+        print(f'Am găsit mașina dorită de dvs. este Mercedes.')
+        break
+    else:
+        print(f'Am gasit masina {masina}.Mai cautam.')
 
 
 print('Rezolvare #4')
@@ -71,6 +69,12 @@ print('Rezolvare #4')
 # else).
 # - Printează S-ar putea să vă placă mașina x.
 
+masini = ['Audi', 'Volvo', 'BMW', 'Mercedes', 'Aston Martin', 'Lăstun', 'Fiat', 'Trabant', 'Opel']
+for masina in masini:
+    if masina == "Trabant" or masina == "Lăstun":
+        continue
+    print(f'S-ar putea sa va placa masina {masina}')
+
 print('Rezolvare #5')
 # 5. Modernizează parcul de mașini:
 # ● Crează o listă goală, masini_vechi.
@@ -81,10 +85,15 @@ print('Rezolvare #5')
 # ● Printează Modele vechi: x.
 # ● Modele noi: x.
 
-# masini_vechi = []
-# for masina in masini:
-#     if masina == 'Lăstun' or masina == 'Trabant':
-#         masini_vechi.append()
+masini = ['Audi', 'Volvo', 'BMW', 'Mercedes', 'Aston Martin', 'Lăstun', 'Fiat', 'Trabant', 'Opel']
+masini_vechi = []
+for masina in masini:
+    if masina == "Trabant" or masina == "Lăstun":
+        masini_vechi.append(masina)
+        idx = masini.index(masina)
+        masini[idx] = 'Tesla'
+print(f'Modele vechi : {masini_vechi}')
+print(f'Modele noi: {masini}')
 
 print('Rezolvare #6')
 # 6. Având dict:
@@ -94,6 +103,9 @@ print('Rezolvare #6')
 # ● Printează Pentru un buget de sub 15000 euro puteți alege mașină
 # xLastun
 # ● Iterează prin listă.
+
+
+
 
 pret_masini = {
 'Dacia': 6800,
@@ -124,23 +136,42 @@ for value in numere:
         lista_3.append(value)
         print(f"am gasit 3 de {len(lista_3)} ori")
 
-
-
 print('Rezolvare #8')
 # 8. Aceeași listă:
 # ● Iterează prin ea
 # ● Calculează și afișează suma numerelor (nu ai voie să folosești sum).
 
 numere = [5, 7, 3, 9, 3, 3, 1, 0, -4, 3]
-numere2 = str([0])
+i = 0
+for n in numere:
+    i += n
+print(i)
+
+print('Rezolvare #9')
 # 9. Aceeași listă:
 # ● Iterează prin ea.
 # ● Afișază cel mai mare număr (nu ai voie să folosești max).
 # max = numere[3]
 # print(max)
 
+numere = [5, 7, 3, 9, 3, 3, 1, 0, -4, 3]
+i = 0
+for n in numere:
+    if i <= n:
+        i = n
+print(i)
+
 # 10. Aceeași listă:
 # ● Iterează prin ea.
 # ● Dacă numărul e pozitiv, înlocuieste-l cu valoarea lui negativă.
 # Ex: dacă e 3, să devină -3
 # ● Afișază noua listă.
+
+numere = [5, 7, 3, 9, 3, 3, 1, 0, -4, 3]
+numere_inversate = []
+for n in numere:
+    if n > 0:
+        numere_inversate.append(-n)
+    else:
+        numere_inversate.append(n)
+print(numere_inversate)

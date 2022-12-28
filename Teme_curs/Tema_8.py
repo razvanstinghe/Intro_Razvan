@@ -16,17 +16,19 @@ driver = webdriver.Chrome()
 
 # -----------------SELECTOR: LINK TEXT----------------
 # # Navigam catre un url
-# driver.get('https://www.techlistic.com/p/java.html')
-# # # Selector by Link Text
-# driver.find_element(By.LINK_TEXT, 'href="https://www.techlistic.com/p/java.html"').click()
-# driver.find_element(By.LINK_TEXT, 'Autocomplete').click()
-#
-# sleep(20)
+# driver.get('https://myfewsteps.blogspot.com/')
+# driver.find_element(By.LINK_TEXT, 'JAVA').click()                    #OK
+driver.get('https://myfewsteps.blogspot.com/java')
+driver.find_element(By.LINK_TEXT, '').click()
+
+sleep(20)
 
 # -----------------SELECTOR: PARTIAL LINK TEXT----------------
 # # Selector by Partial Link Text
-# driver.get('https://www.techlistic.com/p/selenium-practice-form.html')
-
+# driver.get('https://www.techlistic.com/p/java.html')
+# driver.find_element(By.PARTIAL_LINK_TEXT, 'https://www.techlistic.com/p/java.html').click()
+# driver.find_element()
+#
 # sleep(15)
 
 # -----------------SELECTOR: NAME----------------
@@ -42,15 +44,16 @@ driver = webdriver.Chrome()
 
 # -----------------SELECTOR: TAG----------------
 
-driver.get('https://phptravels.net/hotels')
-driver.find_element(By.TAG_NAME, '').click()
-sleep(20)
+# driver.get('https://www.booking.com/index.ro')
+# driver.find_element(By.TAG_NAME, 'input').send_keys('Heilbronn')
+# sleep(20)
 # -----------------SELECTOR: CLASS----------------
 # driver.get('https://phptravels.net/')
 
 # driver.find_element(By.CLASS_NAME, 'dropdown-btn').click()                      # OK
 # driver.find_element(By.CLASS_NAME, 'btn-primary').click()                       # OK
+
 # driver.get('https://phptravels.net/flights')
-# flight_class = driver.find_element(By.CLASS_NAME, 'form-select-sm').send_keys('Business')   # OK
+# flight_class = driver.find_element(By.CLASS_NAME, 'form-select-sm').send_keys('First')   # OK
 #
 # sleep(15)
