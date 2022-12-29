@@ -18,10 +18,11 @@ driver = webdriver.Chrome()
 # # Navigam catre un url
 # driver.get('https://myfewsteps.blogspot.com/')
 # driver.find_element(By.LINK_TEXT, 'JAVA').click()                    #OK
-driver.get('https://myfewsteps.blogspot.com/java')
-driver.find_element(By.LINK_TEXT, '').click()
-
-sleep(20)
+# driver.get('https://myfewsteps.blogspot.com/java')
+# driver.find_element(By.LINK_TEXT, '').click()
+#
+#
+# sleep(20)
 
 # -----------------SELECTOR: PARTIAL LINK TEXT----------------
 # # Selector by Partial Link Text
@@ -48,12 +49,12 @@ sleep(20)
 # driver.find_element(By.TAG_NAME, 'input').send_keys('Heilbronn')
 # sleep(20)
 # -----------------SELECTOR: CLASS----------------
-# driver.get('https://phptravels.net/')
+driver.get('https://phptravels.net/')
 
-# driver.find_element(By.CLASS_NAME, 'dropdown-btn').click()                      # OK
-# driver.find_element(By.CLASS_NAME, 'btn-primary').click()                       # OK
+driver.find_element(By.CLASS_NAME, 'dropdown-btn').click()                      # OK
+driver.find_element(By.CLASS_NAME, 'btn-primary').click()                       # OK
 
 # driver.get('https://phptravels.net/flights')
 # flight_class = driver.find_element(By.CLASS_NAME, 'form-select-sm').send_keys('First')   # OK
 #
-# sleep(15)
+sleep(15)
